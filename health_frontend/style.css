@@ -1,0 +1,126 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: white;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #0275d8;
+    font-size: 2rem;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 75px;
+    border: 9px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle p {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+
+.gauges {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.gauge {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    text-align: center;
+    margin: 10px;
+    position: relative; /* Needed for absolute positioning of the canvas */
+    height: 180px; /* Fixed height for the gauge */
+    background: linear-gradient(to bottom, #ffffff, #f1f1f1);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.gauge canvas {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0); /* Center the canvas horizontally */
+    width: 100%; /* Full width to match parent .gauge div */
+    height: 100%; /* Full height to make it semi-circle */
+}
+
+.gaugeLabel {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 0; /* Position label at the bottom */
+    transform: translateX(-50%);
+    margin-top: 0;
+}
+
+
+
+.historical-data, .recommendations {
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #eee;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.controls label, .controls select {
+    margin: 0 10px;
+    padding: 8px;
+    font-size: 16px;
+}
+
+.chart-container {
+    width: 100%;
+    height: 400px;
+}
+
+
+.recommendations {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+}
+
+.recommendations p {
+    font-size: 16px;
+    color: #666;
+}
